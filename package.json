@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {
+    "webpack": "5.9.0",
+    "webpack-bundle-size-analyzer": "2.0.2",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "3.11.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && mkdirp ./dist && webpack build --progress --color --config prod-webpack.config.js"
   },
   "keywords": [],
   "author": "",
